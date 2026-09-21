@@ -2,17 +2,28 @@
   "name": "SkyforgeFrontier",
   "tree": {
     "$className": "DataModel",
-    "children": [
-      {"$className":"ReplicatedStorage","children":[
-        {"$path":"src/ReplicatedStorage/Shared"},
-        {"$path":"src/ReplicatedStorage/Remotes"}
-      ]},
-      {"$className":"ServerScriptService","children":[
-        {"$path":"src/ServerScriptService"}
-      ]},
-      {"$className":"StarterPlayer","children":[
-        {"$className":"StarterPlayerScripts","children":[{"$path":"src/StarterPlayer/StarterPlayerScripts"}]}
-      ]}
-    ]
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {
+        "$path": "src/ReplicatedStorage/Shared"
+      },
+      "Remotes": {
+        "$className": "Folder"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$path": "src/ServerScriptService",
+      "RemoteBootstrap": {
+        "$path": "src/ReplicatedStorage/Remotes/RemoteBootstrap.server.lua"
+      }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$path": "src/StarterPlayer/StarterPlayerScripts"
+      }
+    }
   }
 }
